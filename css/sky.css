@@ -1,0 +1,77 @@
+/*背景动画*/
+@-webkit-keyframes STAR-MOVE {
+	from {
+		background-position:0% 0%
+	}
+	to { 
+		background-position: 600% 0%
+	}
+}
+ @keyframes STAR-MOVE {
+	from {
+		background-position: 0% 0%
+	}
+	to { 
+		background-position: 600% 0%
+	}
+}
+.wall{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	
+}
+div#background{
+	background: black url('../images/clouds/background.png') repeat-x 5% 0%;
+	background-size: cover;
+	z-index: -3;
+	-webkit-animation: STAR-MOVE  200s linear infinite;
+	-moz-animation: STAR-MOVE  200s linear infinite;
+	-ms-animation: STAR-MOVE  200s linear infinite;
+	animation: STAR-MOVE  200s linear infinite;
+}
+div#midground{
+	background:url('../images/clouds/midground.png')repeat 20% 0%;
+	z-index: -2;
+	-webkit-animation: STAR-MOVE  100s linear infinite;
+	-moz-animation: STAR-MOVE  100s linear infinite;
+	-ms-animation: STAR-MOVE  100s linear infinite;
+	animation: STAR-MOVE  100s linear infinite;
+}
+div#foreground{
+	background:url('../images/clouds/foreground.png')repeat 35% 0%;
+	z-index: -1;
+	-webkit-animation: STAR-MOVE  50s linear infinite;
+	-moz-animation: STAR-MOVE  50s linear infinite;
+	-ms-animation: STAR-MOVE  50s linear infinite;
+	animation: STAR-MOVE  50s linear infinite;
+}
+
+/*换肤键*/
+div#skin{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index:999;
+}
+#skin button{
+	color: #333;
+	width: 50px;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid rgb(204, 204, 204);
+	background-color: #fff;
+}
+#skin button.skin_clouds{
+	border-radius: 4px 0px 0px 4px;
+	border-right:0px; 
+}
+#skin button.skin_stars{
+	border-radius: 0px 4px 4px 0px;
+}
+#skin button.skin_select{
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
